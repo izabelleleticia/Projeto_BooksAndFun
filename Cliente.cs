@@ -201,5 +201,9 @@ namespace Projeto_BooksAndFun
 
         }
 
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            Variaveis.funcao = "ALTERAR";
+        }
     }
 }

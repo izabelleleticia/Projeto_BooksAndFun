@@ -216,7 +216,6 @@
             this.Controls.Add(this.dgvFuncionario);
             this.Controls.Add(this.lblResposta);
             this.Controls.Add(this.pctFuncionario);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmFuncionario";
             this.Text = "Funcionario";
             this.Load += new System.EventHandler(this.Funcionario_Load);

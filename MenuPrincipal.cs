@@ -135,15 +135,11 @@ namespace Projeto_BooksAndFun
             }
         }
 
-        private void dgvContato_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
-
-        private void btnSair_Click(object sender, EventArgs e)
+        private void pctLivros_Click(object sender, EventArgs e)
         {
-            Hide();
-            new frmLogin().Show();
+            
+            new FrmLivros().Show();
         }
 
         private void pctEventos_Click(object sender, EventArgs e)
@@ -151,15 +147,84 @@ namespace Projeto_BooksAndFun
             new frmEventos().Show();
         }
 
-        private void pctLivros_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            Hide();
-            new FrmLivros().Show();
+            if (dgvContato.Rows.Count > 0)
+            {
+                codContato = Convert.ToInt32(dgvContato.SelectedRows[0].Cells[0].Value);
+                emailContato = Convert.ToString(dgvContato.SelectedRows[0].Cells[3].Value).ToString();
+                mensagemContato = Convert.ToString(dgvContato.SelectedRows[0].Cells[4].Value).ToString();
+
+                new frmResponderEmail(emailContato, mensagemContato, codContato).ShowDialog(); //Abre o form sobre o anterior
+
+                CarregarEmail(); //Recarregar a lista do Email
+            }
         }
 
-        private void pctEventos_Click_1(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            new frmEventos().Show();
+            if (dgvContato.Rows.Count > 0)
+            {
+                codContato = Convert.ToInt32(dgvContato.SelectedRows[0].Cells[0].Value);
+                emailContato = Convert.ToString(dgvContato.SelectedRows[0].Cells[3].Value).ToString();
+                mensagemContato = Convert.ToString(dgvContato.SelectedRows[0].Cells[4].Value).ToString();
+
+                new frmResponderEmail(emailContato, mensagemContato, codContato).ShowDialog(); //Abre o form sobre o anterior
+
+                CarregarEmail(); //Recarregar a lista do Email
+            }
+        }
+
+        private void lblApagar_Click(object sender, EventArgs e)
+        {
+            if (dgvContato.SelectedRows.Count > 0)
+            {
+                codContato = Convert.ToInt32(dgvContato.SelectedRows[0].Cells[0].Value);
+
+            }
+            ExcluirContato();
+            CarregarEmail();
+        }
+
+        private void lblResponder_Click(object sender, EventArgs e)
+        {
+            if (dgvContato.Rows.Count > 0)
+            {
+                codContato = Convert.ToInt32(dgvContato.SelectedRows[0].Cells[0].Value);
+                emailContato = Convert.ToString(dgvContato.SelectedRows[0].Cells[3].Value).ToString();
+                mensagemContato = Convert.ToString(dgvContato.SelectedRows[0].Cells[4].Value).ToString();
+
+                new frmResponderEmail(emailContato, mensagemContato, codContato).ShowDialog(); //Abre o form sobre o anterior
+
+                CarregarEmail(); //Recarregar a lista do Email
+            }
+
+        }
+
+        private void btnResponder_Click_1(object sender, EventArgs e)
+        {
+            if (dgvContato.Rows.Count > 0)
+            {
+                codContato = Convert.ToInt32(dgvContato.SelectedRows[0].Cells[0].Value);
+                emailContato = Convert.ToString(dgvContato.SelectedRows[0].Cells[3].Value).ToString();
+                mensagemContato = Convert.ToString(dgvContato.SelectedRows[0].Cells[4].Value).ToString();
+
+                new frmResponderEmail(emailContato, mensagemContato, codContato).ShowDialog(); //Abre o form sobre o anterior
+
+                CarregarEmail(); //Recarregar a lista do Email
+            }
+
+        }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            if (dgvContato.SelectedRows.Count > 0)
+            {
+                codContato = Convert.ToInt32(dgvContato.SelectedRows[0].Cells[0].Value);
+
+            }
+            ExcluirContato();
+            CarregarEmail();
         }
 
         private void pctFuncionario_Click(object sender, EventArgs e)

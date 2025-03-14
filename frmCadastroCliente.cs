@@ -16,16 +16,18 @@ using Org.BouncyCastle.Asn1.Cmp;
 using Org.BouncyCastle.Asn1.Pkcs;
 using Projeto_BooksAndFun;
 using static System.Net.WebRequestMethods;
+using BCrypt.Net;
 
 namespace Projeto_BooksAndFun
 {
+
     public partial class frmCadastroCliente : Form
     {
         public frmCadastroCliente()
         {
             InitializeComponent();
         }
-            //Estrutura de validação FTP
+        //Estrutura de validação FTP
         private bool ValidarFtp()
         {
             if (string.IsNullOrEmpty(Variaveis.enderecoServidorFtp) ||
@@ -39,7 +41,22 @@ namespace Projeto_BooksAndFun
                 return true;
             }
         }
-        
+
+        public class SenhaHelper
+        {
+            // Método para gerar o hash da senha
+            public static string HashSenha(string senha)
+            {
+                return BCrypt.Net.BCrypt.HashPassword(senha);
+            }
+
+            // Método para verificar se a senha digitada corresponde ao hash armazenado
+            public static bool VerificarSenha(string senhaDigitada, string senhaHash)
+            {
+                return BCrypt.Net.BCrypt.Verify(senhaDigitada, senhaHash);
+            }
+        }
+
         //Estrutura de validação FTP
         //private bool ValidarFtp()
         //{
@@ -94,7 +111,8 @@ namespace Projeto_BooksAndFun
                 cmd.Parameters.AddWithValue("@estado", Variaveis.estadoCliente ?? string.Empty);
                 cmd.Parameters.AddWithValue("@telefone", Variaveis.telefoneCliente ?? string.Empty);
                 cmd.Parameters.AddWithValue("@email", Variaveis.emailCliente ?? string.Empty);
-                cmd.Parameters.AddWithValue("@senha", Variaveis.senhaCliente ?? string.Empty);
+                string senhaCriptografada = SenhaHelper.HashSenha(Variaveis.senhaCliente);
+                cmd.Parameters.AddWithValue("@senha", senhaCriptografada);
 
 
                 if (Variaveis.dataCadCliente == DateTime.MinValue)
@@ -136,7 +154,13 @@ namespace Projeto_BooksAndFun
                 cmd.Parameters.AddWithValue("@status", Variaveis.statusServico);
                 cmd.Parameters.AddWithValue("@codigo", Variaveis.codServico);
                 cmd.ExecuteNonQuery();
+                if (Variaveis.dataCadCliente == DateTime.MinValue)
+                {
+                    Variaveis.dataCadCliente = DateTime.Now; // Define a data atual, se necessário
+                }
+                cmd.Parameters.AddWithValue("@data_cad", Variaveis.dataCadCliente.ToString("yyyy-MM-dd HH:mm:ss"));
                 MessageBox.Show("Serviço alterado com sucesso!", "ALTERAR SERVIÇO");
+
                 Banco.Desconectar();
 
                 //Estrutura para FOTO
@@ -230,8 +254,9 @@ namespace Projeto_BooksAndFun
                 Variaveis.emailCliente = txtEmail.Text;
                 Variaveis.telefoneCliente = txtTelefone.Text;
                 Variaveis.senhaCliente = txtSenha.Text;
-                Variaveis.dataCadCliente = DateTime.Parse(mkdData.Text);
+
                 Variaveis.statusServico = cmbStatus.Text;
+
 
                 if (Variaveis.funcao == "CADASTRAR")
                 {
@@ -289,47 +314,47 @@ namespace Projeto_BooksAndFun
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            Variaveis.funcao = "ALTERAR";
+
             new frmCadastroCliente().Show();
         }
     }
 }
-    
-
-        //O ideal para a ComboBox é deixar o status fixos, inseridos manualmente e não puxar do banco
-        //private void CarregarStatusCliente()
-        //{
-        //    try
-        //    {
-        //        Banco.Conectar();
-        //        string selecionar = "SELECT status_cliente from tbl_cliente;";
-        //        MySqlCommand cmd = new MySqlCommand(selecionar, Banco.conexao);
-        //        MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-        //        DataTable dt = new DataTable();
-        //        da.Fill(dt);
-        //        cmbStatus.DataSource = dt;
-        //        cmbStatus.DisplayMember = "status_cliente";
-        //        cmbStatus.SelectedIndex = -1;
-
-        //        Banco.Desconectar();
-        //    }
-        //    catch (Exception erro)
-        //    {
-
-        //        MessageBox.Show("Erro ao carregar as especialidades. " + erro);
-        //    }
-        //}
 
 
+//O ideal para a ComboBox é deixar o status fixos, inseridos manualmente e não puxar do banco
+//private void CarregarStatusCliente()
+//{
+//    try
+//    {
+//        Banco.Conectar();
+//        string selecionar = "SELECT status_cliente from tbl_cliente;";
+//        MySqlCommand cmd = new MySqlCommand(selecionar, Banco.conexao);
+//        MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+//        DataTable dt = new DataTable();
+//        da.Fill(dt);
+//        cmbStatus.DataSource = dt;
+//        cmbStatus.DisplayMember = "status_cliente";
+//        cmbStatus.SelectedIndex = -1;
+
+//        Banco.Desconectar();
+//    }
+//    catch (Exception erro)
+//    {
+
+//        MessageBox.Show("Erro ao carregar as especialidades. " + erro);
+//    }
+//}
 
 
 
 
-        //private void frmCadastroCliente_Load(object sender, EventArgs e)
-        //{
-        //    CarregarStatusCliente();
-        //}
-    
+
+
+//private void frmCadastroCliente_Load(object sender, EventArgs e)
+//{
+//    CarregarStatusCliente();
+//}
+
 
 //Estrutura para FOTO
 //        if (ValidarFtp())

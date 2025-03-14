@@ -85,6 +85,7 @@ namespace Projeto_BooksAndFun
                 {
                     MessageBox.Show("Erro ao consultar o usuário no sistema. " + erro);
                 }
+
             }
         }
 
@@ -92,7 +93,32 @@ namespace Projeto_BooksAndFun
         {
             Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+     
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            new frmMenuPrincipal().Show();
+        }
+
+        private void lblEntrar_Click(object sender, EventArgs e)
+        {
+            new frmMenuPrincipal().Show();
+        }
+
+     
+        
+
     }
-
-
 }
+
+
+

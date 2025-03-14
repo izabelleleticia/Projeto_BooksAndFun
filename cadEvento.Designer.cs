@@ -30,7 +30,6 @@
         {
             this.mtEvento = new System.Windows.Forms.MonthCalendar();
             this.txtNomeEvento = new System.Windows.Forms.TextBox();
-            this.pctFuncionario = new System.Windows.Forms.PictureBox();
             this.lblResposta = new System.Windows.Forms.Label();
             this.pnlEvento = new System.Windows.Forms.Panel();
             this.lblNomeEvento = new System.Windows.Forms.Label();
@@ -39,8 +38,9 @@
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pctFuncionario)).BeginInit();
+            this.pctFuncionario = new System.Windows.Forms.PictureBox();
             this.pnlEvento.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFuncionario)).BeginInit();
             this.SuspendLayout();
             // 
             // mtEvento
@@ -57,16 +57,6 @@
             this.txtNomeEvento.Name = "txtNomeEvento";
             this.txtNomeEvento.Size = new System.Drawing.Size(220, 20);
             this.txtNomeEvento.TabIndex = 1;
-            // 
-            // pctFuncionario
-            // 
-            this.pctFuncionario.Image = global::Projeto_BooksAndFun.Properties.Resources.calendario_modified2;
-            this.pctFuncionario.Location = new System.Drawing.Point(67, 21);
-            this.pctFuncionario.Name = "pctFuncionario";
-            this.pctFuncionario.Size = new System.Drawing.Size(165, 213);
-            this.pctFuncionario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctFuncionario.TabIndex = 67;
-            this.pctFuncionario.TabStop = false;
             // 
             // lblResposta
             // 
@@ -158,6 +148,16 @@
             this.btnExcluir.Text = "EXCLUIR";
             this.btnExcluir.UseVisualStyleBackColor = false;
             // 
+            // pctFuncionario
+            // 
+            this.pctFuncionario.Image = global::Projeto_BooksAndFun.Properties.Resources.calendario_modified2;
+            this.pctFuncionario.Location = new System.Drawing.Point(67, 21);
+            this.pctFuncionario.Name = "pctFuncionario";
+            this.pctFuncionario.Size = new System.Drawing.Size(165, 213);
+            this.pctFuncionario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctFuncionario.TabIndex = 67;
+            this.pctFuncionario.TabStop = false;
+            // 
             // frmCadEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,11 +173,11 @@
             this.Controls.Add(this.lblResposta);
             this.Controls.Add(this.pctFuncionario);
             this.Controls.Add(this.txtNomeEvento);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmCadEvento";
             this.Text = "cadEvento";
-            ((System.ComponentModel.ISupportInitialize)(this.pctFuncionario)).EndInit();
             this.pnlEvento.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pctFuncionario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

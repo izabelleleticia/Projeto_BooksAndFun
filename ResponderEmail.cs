@@ -78,10 +78,7 @@ namespace Projeto_BooksAndFun
 
         private void btnResponder_Click(object sender, EventArgs e)
         {
-            lblResposta.Visible = true;
-            rtbResposta.Visible = true;
-            btnEnviar.Visible = true;
-            rtbMensagem.Size = new Size(220, 232);
+          
         }
 
         private void btnSair_Click_1(object sender, EventArgs e)
@@ -92,6 +89,56 @@ namespace Projeto_BooksAndFun
         private void lblResposta_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnVisualizar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmResponderEmail_Load(object sender, EventArgs e)
+        {
+
+        }
+        //btnEnviar
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            lblResposta.Visible = true;
+            rtbResposta.Visible = true;
+            btnEnviar.Visible = true;
+            rtbMensagem.Size = new Size(220, 232);
+
+            try
+            {
+                //Configurar o SMTP
+                SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 465);
+                smtpClient.Credentials = new System.Net.NetworkCredential("honeymoonspam@gmail.com", "poqueti002"); //Email e senha da empresa
+                smtpClient.EnableSsl = true;
+
+                //Configurar Email
+                MailMessage mailMessage = new MailMessage();
+                mailMessage.From = new MailAddress("honeymoonspam@gmail.com");
+                mailMessage.To.Add(emailContato);
+                mailMessage.Subject = txtAssunto.Text;
+                mailMessage.Body = rtbResposta.Text;
+                mailMessage.IsBodyHtml = false;
+
+                //Enviar Email
+                smtpClient.Send(mailMessage);
+
+                AtualizarStatus(codContato);
+
+                MessageBox.Show("E-mail Enviado com sucesso", "Sucesso");
+
+                Close();
+
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro ao enviar E-mail.\n" + erro, "Erro");
+            }
         }
 
         private void AtualizarStatus(int codContato)

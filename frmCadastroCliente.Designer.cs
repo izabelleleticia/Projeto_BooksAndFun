@@ -31,9 +31,7 @@
             this.lblCadastrar = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
             this.lblCPF = new System.Windows.Forms.Label();
-            this.txtCPF = new System.Windows.Forms.TextBox();
             this.lblTelefone = new System.Windows.Forms.Label();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.lblEndereco = new System.Windows.Forms.Label();
@@ -54,8 +52,9 @@
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.mkdData = new System.Windows.Forms.MaskedTextBox();
             this.btnSair = new System.Windows.Forms.Button();
+            this.txtCPF = new System.Windows.Forms.MaskedTextBox();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnAlterar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +77,7 @@
             this.lblNome.BackColor = System.Drawing.SystemColors.Control;
             this.lblNome.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
-            this.lblNome.Location = new System.Drawing.Point(208, 108);
+            this.lblNome.Location = new System.Drawing.Point(285, 140);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(69, 23);
             this.lblNome.TabIndex = 27;
@@ -88,17 +87,10 @@
             // txtNome
             // 
             this.txtNome.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNome.Location = new System.Drawing.Point(212, 136);
+            this.txtNome.Location = new System.Drawing.Point(289, 171);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(339, 20);
+            this.txtNome.Size = new System.Drawing.Size(279, 20);
             this.txtNome.TabIndex = 28;
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Location = new System.Drawing.Point(702, 295);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(160, 20);
-            this.txtTelefone.TabIndex = 30;
             // 
             // lblCPF
             // 
@@ -106,20 +98,12 @@
             this.lblCPF.BackColor = System.Drawing.SystemColors.Control;
             this.lblCPF.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCPF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
-            this.lblCPF.Location = new System.Drawing.Point(565, 108);
+            this.lblCPF.Location = new System.Drawing.Point(602, 145);
             this.lblCPF.Name = "lblCPF";
             this.lblCPF.Size = new System.Drawing.Size(52, 23);
             this.lblCPF.TabIndex = 29;
             this.lblCPF.Text = "CPF:";
             this.lblCPF.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // txtCPF
-            // 
-            this.txtCPF.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCPF.Location = new System.Drawing.Point(569, 134);
-            this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(197, 20);
-            this.txtCPF.TabIndex = 32;
             // 
             // lblTelefone
             // 
@@ -127,7 +111,7 @@
             this.lblTelefone.BackColor = System.Drawing.SystemColors.Control;
             this.lblTelefone.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
-            this.lblTelefone.Location = new System.Drawing.Point(698, 269);
+            this.lblTelefone.Location = new System.Drawing.Point(630, 276);
             this.lblTelefone.Name = "lblTelefone";
             this.lblTelefone.Size = new System.Drawing.Size(108, 23);
             this.lblTelefone.TabIndex = 31;
@@ -137,7 +121,7 @@
             // txtEstado
             // 
             this.txtEstado.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEstado.Location = new System.Drawing.Point(418, 212);
+            this.txtEstado.Location = new System.Drawing.Point(451, 235);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(145, 20);
             this.txtEstado.TabIndex = 34;
@@ -148,7 +132,7 @@
             this.lblEndereco.BackColor = System.Drawing.SystemColors.Control;
             this.lblEndereco.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEndereco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
-            this.lblEndereco.Location = new System.Drawing.Point(565, 183);
+            this.lblEndereco.Location = new System.Drawing.Point(602, 209);
             this.lblEndereco.Name = "lblEndereco";
             this.lblEndereco.Size = new System.Drawing.Size(116, 23);
             this.lblEndereco.TabIndex = 33;
@@ -158,9 +142,9 @@
             // txtCidade
             // 
             this.txtCidade.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCidade.Location = new System.Drawing.Point(212, 212);
+            this.txtCidade.Location = new System.Drawing.Point(289, 235);
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(194, 20);
+            this.txtCidade.Size = new System.Drawing.Size(146, 20);
             this.txtCidade.TabIndex = 36;
             // 
             // lblEstado
@@ -169,7 +153,7 @@
             this.lblEstado.BackColor = System.Drawing.SystemColors.Control;
             this.lblEstado.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
-            this.lblEstado.Location = new System.Drawing.Point(412, 186);
+            this.lblEstado.Location = new System.Drawing.Point(447, 209);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(89, 23);
             this.lblEstado.TabIndex = 35;
@@ -178,9 +162,9 @@
             // 
             // txtBairro
             // 
-            this.txtBairro.Location = new System.Drawing.Point(211, 295);
+            this.txtBairro.Location = new System.Drawing.Point(289, 302);
             this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(195, 20);
+            this.txtBairro.Size = new System.Drawing.Size(146, 20);
             this.txtBairro.TabIndex = 38;
             // 
             // lblEmail
@@ -189,7 +173,7 @@
             this.lblEmail.BackColor = System.Drawing.SystemColors.Control;
             this.lblEmail.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
-            this.lblEmail.Location = new System.Drawing.Point(411, 269);
+            this.lblEmail.Location = new System.Drawing.Point(447, 276);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(76, 23);
             this.lblEmail.TabIndex = 37;
@@ -202,11 +186,11 @@
             this.lblDataCad.BackColor = System.Drawing.SystemColors.Control;
             this.lblDataCad.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDataCad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
-            this.lblDataCad.Location = new System.Drawing.Point(207, 365);
+            this.lblDataCad.Location = new System.Drawing.Point(286, 343);
             this.lblDataCad.Name = "lblDataCad";
-            this.lblDataCad.Size = new System.Drawing.Size(202, 23);
+            this.lblDataCad.Size = new System.Drawing.Size(168, 23);
             this.lblDataCad.TabIndex = 39;
-            this.lblDataCad.Text = "DATA DO CADASTRO:";
+            this.lblDataCad.Text = "DATA CADASTRO:";
             this.lblDataCad.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblStatus
@@ -215,7 +199,7 @@
             this.lblStatus.BackColor = System.Drawing.SystemColors.Control;
             this.lblStatus.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
-            this.lblStatus.Location = new System.Drawing.Point(637, 365);
+            this.lblStatus.Location = new System.Drawing.Point(670, 343);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(86, 23);
             this.lblStatus.TabIndex = 40;
@@ -225,9 +209,9 @@
             // txtEndereco
             // 
             this.txtEndereco.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEndereco.Location = new System.Drawing.Point(569, 209);
+            this.txtEndereco.Location = new System.Drawing.Point(606, 235);
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(197, 20);
+            this.txtEndereco.Size = new System.Drawing.Size(186, 20);
             this.txtEndereco.TabIndex = 42;
             // 
             // lblCidade
@@ -236,7 +220,7 @@
             this.lblCidade.BackColor = System.Drawing.SystemColors.Control;
             this.lblCidade.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
-            this.lblCidade.Location = new System.Drawing.Point(208, 183);
+            this.lblCidade.Location = new System.Drawing.Point(285, 209);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(86, 23);
             this.lblCidade.TabIndex = 41;
@@ -249,7 +233,7 @@
             this.lblSenha.BackColor = System.Drawing.SystemColors.Control;
             this.lblSenha.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
-            this.lblSenha.Location = new System.Drawing.Point(424, 365);
+            this.lblSenha.Location = new System.Drawing.Point(460, 343);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(77, 23);
             this.lblSenha.TabIndex = 43;
@@ -258,9 +242,9 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(415, 295);
+            this.txtEmail.Location = new System.Drawing.Point(451, 302);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(281, 20);
+            this.txtEmail.Size = new System.Drawing.Size(173, 20);
             this.txtEmail.TabIndex = 46;
             // 
             // lblBairro
@@ -269,7 +253,7 @@
             this.lblBairro.BackColor = System.Drawing.SystemColors.Control;
             this.lblBairro.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBairro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
-            this.lblBairro.Location = new System.Drawing.Point(208, 269);
+            this.lblBairro.Location = new System.Drawing.Point(286, 276);
             this.lblBairro.Name = "lblBairro";
             this.lblBairro.Size = new System.Drawing.Size(87, 23);
             this.lblBairro.TabIndex = 45;
@@ -278,8 +262,9 @@
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(428, 391);
+            this.txtSenha.Location = new System.Drawing.Point(453, 383);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(201, 20);
             this.txtSenha.TabIndex = 47;
             // 
@@ -290,11 +275,11 @@
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.Font = new System.Drawing.Font("Britannic Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCadastrar.Location = new System.Drawing.Point(700, 484);
+            this.btnCadastrar.Location = new System.Drawing.Point(34, 312);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(162, 38);
+            this.btnCadastrar.Size = new System.Drawing.Size(120, 38);
             this.btnCadastrar.TabIndex = 49;
-            this.btnCadastrar.Text = "CADASTRAR";
+            this.btnCadastrar.Text = "SALVAR";
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
@@ -305,9 +290,9 @@
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Britannic Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnLimpar.Location = new System.Drawing.Point(212, 484);
+            this.btnLimpar.Location = new System.Drawing.Point(34, 356);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(152, 38);
+            this.btnLimpar.Size = new System.Drawing.Size(120, 38);
             this.btnLimpar.TabIndex = 50;
             this.btnLimpar.Text = "LIMPAR";
             this.btnLimpar.UseVisualStyleBackColor = false;
@@ -318,17 +303,17 @@
             this.cmbStatus.Items.AddRange(new object[] {
             "ATIVO",
             "INATIVO"});
-            this.cmbStatus.Location = new System.Drawing.Point(641, 390);
+            this.cmbStatus.Location = new System.Drawing.Point(674, 382);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(196, 21);
+            this.cmbStatus.Size = new System.Drawing.Size(117, 21);
             this.cmbStatus.TabIndex = 51;
             // 
             // mkdData
             // 
-            this.mkdData.Location = new System.Drawing.Point(212, 392);
+            this.mkdData.Location = new System.Drawing.Point(289, 384);
             this.mkdData.Mask = "00/00/0000";
             this.mkdData.Name = "mkdData";
-            this.mkdData.Size = new System.Drawing.Size(194, 20);
+            this.mkdData.Size = new System.Drawing.Size(146, 20);
             this.mkdData.TabIndex = 52;
             this.mkdData.ValidatingType = typeof(System.DateTime);
             // 
@@ -346,36 +331,40 @@
             this.btnSair.Text = "X";
             this.btnSair.UseVisualStyleBackColor = false;
             // 
+            // txtCPF
+            // 
+            this.txtCPF.Location = new System.Drawing.Point(606, 171);
+            this.txtCPF.Mask = "000,000,000-00";
+            this.txtCPF.Name = "txtCPF";
+            this.txtCPF.Size = new System.Drawing.Size(176, 20);
+            this.txtCPF.TabIndex = 55;
+            this.txtCPF.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Location = new System.Drawing.Point(634, 302);
+            this.txtTelefone.Mask = "00 00000-9999";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(130, 20);
+            this.txtTelefone.TabIndex = 56;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Projeto_BooksAndFun.Properties.Resources.feedback_modified2;
-            this.pictureBox1.Location = new System.Drawing.Point(-2, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(34, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(161, 262);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // btnAlterar
-            // 
-            this.btnAlterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(122)))), ((int)(((byte)(178)))));
-            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlterar.Font = new System.Drawing.Font("Britannic Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAlterar.Location = new System.Drawing.Point(482, 484);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(135, 38);
-            this.btnAlterar.TabIndex = 54;
-            this.btnAlterar.Text = "ALTERAR";
-            this.btnAlterar.UseVisualStyleBackColor = false;
-            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
-            // 
             // frmCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1045, 628);
-            this.Controls.Add(this.btnAlterar);
+            this.ClientSize = new System.Drawing.Size(1045, 526);
+            this.Controls.Add(this.txtTelefone);
+            this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.mkdData);
             this.Controls.Add(this.cmbStatus);
@@ -395,15 +384,12 @@
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.lblEndereco);
-            this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.lblTelefone);
-            this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.lblCPF);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.lblCadastrar);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCadastroCliente";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -417,9 +403,7 @@
         private System.Windows.Forms.Label lblCadastrar;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.Label lblCPF;
-        private System.Windows.Forms.TextBox txtCPF;
         private System.Windows.Forms.Label lblTelefone;
         private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label lblEndereco;
@@ -440,6 +424,7 @@
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.MaskedTextBox mkdData;
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.MaskedTextBox txtCPF;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
     }
 }

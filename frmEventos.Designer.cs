@@ -39,10 +39,10 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.dgvFuncionario = new System.Windows.Forms.DataGridView();
+            this.dgvEvento = new System.Windows.Forms.DataGridView();
             this.lblResposta = new System.Windows.Forms.Label();
             this.pctFuncionario = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEvento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFuncionario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -145,10 +145,10 @@
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // dgvFuncionario
+            // dgvEvento
             // 
-            this.dgvFuncionario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
-            this.dgvFuncionario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvEvento.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
+            this.dgvEvento.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Navy;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Britannic Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -156,8 +156,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(122)))), ((int)(((byte)(178)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFuncionario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEvento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvEvento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -165,9 +165,9 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(122)))), ((int)(((byte)(178)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvFuncionario.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvFuncionario.Location = new System.Drawing.Point(263, 43);
-            this.dgvFuncionario.Name = "dgvFuncionario";
+            this.dgvEvento.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvEvento.Location = new System.Drawing.Point(263, 43);
+            this.dgvEvento.Name = "dgvEvento";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -175,9 +175,9 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(122)))), ((int)(((byte)(178)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFuncionario.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvFuncionario.Size = new System.Drawing.Size(740, 543);
-            this.dgvFuncionario.TabIndex = 68;
+            this.dgvEvento.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvEvento.Size = new System.Drawing.Size(740, 543);
+            this.dgvEvento.TabIndex = 68;
             // 
             // lblResposta
             // 
@@ -213,13 +213,13 @@
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.dgvFuncionario);
+            this.Controls.Add(this.dgvEvento);
             this.Controls.Add(this.lblResposta);
             this.Controls.Add(this.pctFuncionario);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEventos";
             this.Text = "frmEnventos";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionario)).EndInit();
+            this.Load += new System.EventHandler(this.frmEventos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEvento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFuncionario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -236,7 +236,7 @@
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.DataGridView dgvFuncionario;
+        private System.Windows.Forms.DataGridView dgvEvento;
         private System.Windows.Forms.Label lblResposta;
         private System.Windows.Forms.PictureBox pctFuncionario;
     }

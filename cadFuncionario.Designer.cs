@@ -385,7 +385,6 @@
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.lblCadastrar);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "cadFuncionario";
             this.Text = "cadFuncionario";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
