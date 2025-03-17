@@ -44,8 +44,8 @@ namespace Projeto_BooksAndFun
             try
             {
                 //Configurar o SMTP
-                SmtpClient smtpClient = new SmtpClient("smtp.hostinger.com", 587);
-                smtpClient.Credentials = new System.Net.NetworkCredential("ti26@smpsistema.com.br", "Senac@ti26"); //Email e senha da empresa
+                SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 465);
+                smtpClient.Credentials = new System.Net.NetworkCredential("honeymoonspam@gmail.com", "Senac@ti26"); //Email e senha da empresa
                 smtpClient.EnableSsl = true;
 
                 //Configurar Email
@@ -111,9 +111,10 @@ namespace Projeto_BooksAndFun
             try
             {
                 //Configurar o SMTP
-                SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 465);
-                smtpClient.Credentials = new System.Net.NetworkCredential("honeymoonspam@gmail.com", "poqueti002"); //Email e senha da empresa
+                SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
                 smtpClient.EnableSsl = true;
+                smtpClient.UseDefaultCredentials = false; // Adicione esta linha
+                smtpClient.Credentials = new System.Net.NetworkCredential("honeymoonspam@gmail.com", "svwe utcr aaet jgfg");
 
                 //Configurar Email
                 MailMessage mailMessage = new MailMessage();
