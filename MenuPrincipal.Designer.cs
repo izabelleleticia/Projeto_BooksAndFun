@@ -39,7 +39,7 @@
             this.lblData = new System.Windows.Forms.Label();
             this.lblApagar = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnEntrar = new System.Windows.Forms.PictureBox();
+            this.btnApagar = new System.Windows.Forms.PictureBox();
             this.pctFuncionario = new System.Windows.Forms.PictureBox();
             this.pctServico = new System.Windows.Forms.PictureBox();
             this.pctCliente = new System.Windows.Forms.PictureBox();
@@ -51,7 +51,7 @@
             this.btnResponder = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContato)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEntrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnApagar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFuncionario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctServico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctCliente)).BeginInit();
@@ -147,16 +147,16 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // btnEntrar
+            // btnApagar
             // 
-            this.btnEntrar.Image = global::Projeto_BooksAndFun.Properties.Resources.Rectangle_3__2_;
-            this.btnEntrar.Location = new System.Drawing.Point(417, 459);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(156, 32);
-            this.btnEntrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnEntrar.TabIndex = 61;
-            this.btnEntrar.TabStop = false;
-            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
+            this.btnApagar.Image = global::Projeto_BooksAndFun.Properties.Resources.Rectangle_3__2_;
+            this.btnApagar.Location = new System.Drawing.Point(417, 459);
+            this.btnApagar.Name = "btnApagar";
+            this.btnApagar.Size = new System.Drawing.Size(156, 32);
+            this.btnApagar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnApagar.TabIndex = 61;
+            this.btnApagar.TabStop = false;
+            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click_1);
             // 
             // pctFuncionario
             // 
@@ -274,7 +274,7 @@
             this.Controls.Add(this.lblVisualizar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblApagar);
-            this.Controls.Add(this.btnEntrar);
+            this.Controls.Add(this.btnApagar);
             this.Controls.Add(this.pctFuncionario);
             this.Controls.Add(this.lblData);
             this.Controls.Add(this.pctServico);
@@ -289,7 +289,7 @@
             this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvContato)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEntrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnApagar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFuncionario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctServico)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctCliente)).EndInit();
@@ -314,7 +314,7 @@
         private System.Windows.Forms.Timer timerData;
         private System.Windows.Forms.Label lblData;
         private System.Windows.Forms.PictureBox pctFuncionario;
-        private System.Windows.Forms.PictureBox btnEntrar;
+        private System.Windows.Forms.PictureBox btnApagar;
         private System.Windows.Forms.Label lblApagar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblVisualizar;

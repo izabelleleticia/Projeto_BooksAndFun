@@ -123,7 +123,8 @@ namespace Projeto_BooksAndFun
             try
             {
                 Banco.Conectar();
-                string selecionar = "UPDATE tbl_contato SET status_contato = 'Excluido';";
+                string selecionar = "UPDATE tbl_contato SET status_contato = 'Excluido' WHERE id_contato = @codContato;";
+
                 MySqlCommand cmd = new MySqlCommand(selecionar, Banco.conexao);
                 cmd.Parameters.AddWithValue("@codContato", codContato);
                 cmd.ExecuteNonQuery();
@@ -180,10 +181,10 @@ namespace Projeto_BooksAndFun
             if (dgvContato.SelectedRows.Count > 0)
             {
                 codContato = Convert.ToInt32(dgvContato.SelectedRows[0].Cells[0].Value);
-
+                ExcluirContato();
+                CarregarEmail();
             }
-            ExcluirContato();
-            CarregarEmail();
+           
         }
 
         private void lblResponder_Click(object sender, EventArgs e)
@@ -216,7 +217,7 @@ namespace Projeto_BooksAndFun
 
         }
 
-        private void btnEntrar_Click(object sender, EventArgs e)
+        private void btnApagar_Click_1(object sender, EventArgs e)
         {
             if (dgvContato.SelectedRows.Count > 0)
             {
