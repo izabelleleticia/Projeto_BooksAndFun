@@ -19,8 +19,36 @@ namespace Projeto_BooksAndFun
         public FrmLivros()
         {
             InitializeComponent();
-           
-            
+
+            // Define a cor de fundo do DataGridView
+            dgvLivros.BackgroundColor = Color.FromArgb(92, 33, 81); // Invertido: fundo branco
+            dgvLivros.GridColor = Color.FromArgb(92, 33, 81); // Cor das grades roxa
+
+            // Estiliza as células normais (fundo roxo escuro, texto branco)
+
+            dgvLivros.DefaultCellStyle.ForeColor = Color.White; // Texto branco
+            dgvLivros.DefaultCellStyle.Font = new Font("Britannic", 16);
+
+            // Estiliza as células quando selecionadas (fundo branco, texto preto)
+            dgvLivros.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(92, 33, 81); // Cabeçalho fundo branco
+            dgvLivros.DefaultCellStyle.SelectionBackColor = Color.FromArgb(135, 122, 178); // Invertido: roxo claro
+            dgvLivros.DefaultCellStyle.SelectionForeColor = Color.White; // Texto preto
+
+            // Configuração do cabeçalho (fundo roxo escuro, texto branco)
+            dgvLivros.ColumnHeadersDefaultCellStyle.ForeColor = Color.White; // Texto roxo escuro
+            dgvLivros.ColumnHeadersDefaultCellStyle.Font = new Font("Britannic Bold", 16, FontStyle.Bold);
+
+
+            // Ativa a mudança de cor no cabeçalho
+            dgvLivros.EnableHeadersVisualStyles = false;
+
+            // 🔹 AutoSize das colunas (ajuste automático ao conteúdo)
+            dgvLivros.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            // 🔹 AutoSize das linhas (ajuste automático ao conteúdo)
+            dgvLivros.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
+
         }
         private void CarregarLivros()
         {
@@ -64,5 +92,7 @@ namespace Projeto_BooksAndFun
         {
             CarregarLivros();
         }
+
+   
     }
 }

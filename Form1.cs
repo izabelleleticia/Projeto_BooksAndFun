@@ -114,9 +114,10 @@ namespace Projeto_BooksAndFun
             new frmMenuPrincipal().Show();
         }
 
-     
-        
-
+        private void bntSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
 
