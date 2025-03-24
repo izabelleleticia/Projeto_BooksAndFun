@@ -40,6 +40,8 @@ namespace Projeto_BooksAndFun
                 dgvFuncionario.Columns[3].HeaderText = "EMAIL";
                 dgvFuncionario.Columns[4].Visible = false;
                 dgvFuncionario.Columns[5].HeaderText = "STATUS";
+                dgvFuncionario.Columns[6].Visible = false;
+
 
                 dgvFuncionario.ClearSelection();
 

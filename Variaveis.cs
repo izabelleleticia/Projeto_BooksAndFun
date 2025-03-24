@@ -27,7 +27,10 @@ namespace Projeto_BooksAndFun
         public static int codCliente;
         public static string nomeCliente, cpfCliente, enderecoCliente, cidadeCliente, bairroCliente, telefoneCliente, senhaCliente, emailCliente, statusCliente, estadoCliente;
         public static DateTime dataCadCliente;
-        
+
+        //Evento
+        public static string dataInicioEvento, dataFimEvento, descricaoEvento, nomeEvento, localEvento, statusEvento;
+        public static string idEventoSelecionado;
 
         //FTP
         public static string enderecoServidorFtp = "ftp://127.0.0.1/";

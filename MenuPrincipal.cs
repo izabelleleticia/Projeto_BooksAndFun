@@ -18,6 +18,10 @@ namespace Projeto_BooksAndFun
         public frmMenuPrincipal()
         {
             InitializeComponent();
+            dgvContato.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvContato.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
+
         }
 
         private void frmMenuPrincipal_Load(object sender, EventArgs e)
@@ -228,9 +232,17 @@ namespace Projeto_BooksAndFun
             CarregarEmail();
         }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            
+            new Vendas().Show();
+            Hide();
+        }
+
         private void pctFuncionario_Click(object sender, EventArgs e)
         {
             new frmFuncionario().Show();
+            Hide();
         }
 
   

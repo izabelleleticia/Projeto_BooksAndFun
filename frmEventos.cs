@@ -47,7 +47,7 @@ namespace Projeto_BooksAndFun
 
         }
 
-    
+
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             new frmCadEvento().Show();
@@ -84,7 +84,7 @@ namespace Projeto_BooksAndFun
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Erro ao carregar os clientes. " + erro);
+                MessageBox.Show("Erro ao carregar os eventos. " + erro);
             }
         }
 
@@ -198,7 +198,7 @@ namespace Projeto_BooksAndFun
 
         private void cmbStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbStatus.Text == "ATIVO" ||  cmbStatus.Text == "DESATIVADO")
+            if (cmbStatus.Text == "ATIVO" || cmbStatus.Text == "DESATIVADO")
             {
                 txtNome.Enabled = false;
                 CarregarEventos();
@@ -207,16 +207,43 @@ namespace Projeto_BooksAndFun
             {
                 CarregarEventosInativos();
             }
-               
-            
+
+
             else if (cmbStatus.Text == "TODOS")
             {
                 CarregarTodosEventos();
-          
-            
+
+
+            }
         }
-    }
-    }
 
 
+       private void dgvEvento_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)  // Verifica se a célula clicada é válida
+            {
+                DataGridViewRow row = dgvEvento.Rows[e.RowIndex];
+
+                // Usando índice para acessar a célula, já que a coluna está invisível
+                if (row.Cells[0].Value != DBNull.Value && row.Cells[0].Value != null)
+                {
+                    try
+                    {
+                        // Tenta converter o valor da célula "id_evento" (primeira célula)
+                        Variaveis.idEventoSelecionado = Convert.ToString(row.Cells[0].Value);
+                    }
+                    catch (FormatException ex)
+                    {
+                        MessageBox.Show($"Erro ao converter o ID do evento: {ex.Message}", "Erro de Conversão");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("O evento selecionado não possui um ID válido.", "Erro");
+                }
+            }
+        }
+
+
+    }
 }

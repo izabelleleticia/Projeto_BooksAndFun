@@ -101,6 +101,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlterarEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlterarEvento.Designer.cs">
+      <DependentUpon>AlterarEvento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Banco.cs" />
     <Compile Include="cadEvento.cs">
       <SubType>Form</SubType>
@@ -113,6 +119,12 @@
     </Compile>
     <Compile Include="cadFuncionario.Designer.cs">
       <DependentUpon>cadFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadLivros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadLivros.Designer.cs">
+      <DependentUpon>CadLivros.cs</DependentUpon>
     </Compile>
     <Compile Include="Cliente.cs">
       <SubType>Form</SubType>
@@ -172,11 +184,23 @@
       <DependentUpon>ResponderEmail.cs</DependentUpon>
     </Compile>
     <Compile Include="Variaveis.cs" />
+    <Compile Include="Vendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vendas.Designer.cs">
+      <DependentUpon>Vendas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AlterarEvento.resx">
+      <DependentUpon>AlterarEvento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="cadEvento.resx">
       <DependentUpon>cadEvento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cadFuncionario.resx">
       <DependentUpon>cadFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadLivros.resx">
+      <DependentUpon>CadLivros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
@@ -210,6 +234,9 @@
     <EmbeddedResource Include="ResponderEmail.resx">
       <DependentUpon>ResponderEmail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vendas.resx">
+      <DependentUpon>Vendas.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -230,6 +257,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\revenue1.png" />
+    <None Include="Resources\revenue.png" />
+    <None Include="Resources\open-book %282%29.png" />
+    <None Include="Resources\open-book %281%29.png" />
+    <None Include="Resources\open-book.png" />
     <None Include="Resources\close-button %282%29.png" />
     <None Include="Resources\close-button %281%29.png" />
     <None Include="Resources\close-button.png" />
