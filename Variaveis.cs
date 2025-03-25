@@ -32,6 +32,15 @@ namespace Projeto_BooksAndFun
         public static string dataInicioEvento, dataFimEvento, descricaoEvento, nomeEvento, localEvento, statusEvento;
         public static string idEventoSelecionado;
 
+        //Vendas
+        public static int idCliente, idLivro;
+        public static DateTime dataCompra;
+        public static decimal valorTotal;
+
+        //Livros
+        public static string nomeLivro;
+
+
         //FTP
         public static string enderecoServidorFtp = "ftp://127.0.0.1/";
         public static string usuarioFtp = "ti26";

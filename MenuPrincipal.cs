@@ -20,6 +20,7 @@ namespace Projeto_BooksAndFun
             InitializeComponent();
             dgvContato.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvContato.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            
 
 
         }
@@ -34,7 +35,7 @@ namespace Projeto_BooksAndFun
             try
             {
                 Banco.Conectar();
-                string selecionar = "SELECT * FROM tbl_contato WHERE status_contato <> 'Excluido';";
+                string selecionar = "SELECT * FROM tbl_contato WHERE status_contato = 'Aguardando';";
                 MySqlCommand cmd = new MySqlCommand(selecionar, Banco.conexao);
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -232,17 +233,48 @@ namespace Projeto_BooksAndFun
             CarregarEmail();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+
+        private void pctServicos_Click(object sender, EventArgs e)
         {
+            new frmServicos().Show();
+        }
+
+        private void pctVendas_Click(object sender, EventArgs e)
+        {
+           new Vendas().Show();
+        }
+
+        private void pctLivros_Click_1(object sender, EventArgs e)
+        {
+            new FrmLivros().Show();
+        }
+
+        private void pctFuncionarios_Click(object sender, EventArgs e)
+        {
+            new frmFuncionario().Show();
             
-            new Vendas().Show();
-            Hide();
+        }
+
+        private void pctClientes_Click(object sender, EventArgs e)
+        {
+            new frmCliente().Show();
+            
+        }
+
+        private void pctEventos_Click_1(object sender, EventArgs e)
+        {
+            new frmEventos().Show();
+            
+        }
+
+        private void bntSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void pctFuncionario_Click(object sender, EventArgs e)
         {
-            new frmFuncionario().Show();
-            Hide();
+            
         }
 
   

@@ -34,7 +34,7 @@ namespace Projeto_BooksAndFun
                 dgvLivros.DataSource = dt;
                 dgvLivros.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                 
-                dgvLivros.Columns[0].HeaderText = "ID";
+                dgvLivros.Columns[0].Visible = false;
                 dgvLivros.Columns[1].HeaderText = "TITULO";
                 dgvLivros.Columns[2].Visible = false;
                 dgvLivros.Columns[3].Visible = false; 
@@ -58,6 +58,60 @@ namespace Projeto_BooksAndFun
             CarregarLivros();
         }
 
-   
+        private void bntSair_Click(object sender, EventArgs e)
+        {
+            new frmMenuPrincipal().Show();
+            Close();
+        }
+
+        private void lblResposta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvLivros_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pctFuncionario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblStatus_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
