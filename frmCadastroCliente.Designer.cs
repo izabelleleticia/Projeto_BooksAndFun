@@ -362,7 +362,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1045, 526);
+            this.ClientSize = new System.Drawing.Size(1476, 690);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.btnSair);
@@ -390,7 +390,9 @@
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.lblCadastrar);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCadastroCliente";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

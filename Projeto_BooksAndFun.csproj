@@ -269,6 +269,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Rectangle 7 %281%29.png" />
+    <None Include="Resources\Rectangle 7.png" />
     <None Include="Resources\revenue1.png" />
     <None Include="Resources\revenue.png" />
     <None Include="Resources\open-book %282%29.png" />

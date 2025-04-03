@@ -76,7 +76,8 @@ namespace Projeto_BooksAndFun
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-
+            new CadLivros().Show();
+            Hide();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)

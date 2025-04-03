@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFuncionario));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFuncionario));
             this.btnSair = new System.Windows.Forms.Button();
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
@@ -41,10 +41,10 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.lblResposta = new System.Windows.Forms.Label();
-            this.pctFuncionario = new System.Windows.Forms.PictureBox();
             this.dgvFuncionario = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.pctFuncionario)).BeginInit();
+            this.pctFuncionario = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFuncionario)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSair
@@ -54,7 +54,7 @@
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSair.Location = new System.Drawing.Point(996, 12);
+            this.btnSair.Location = new System.Drawing.Point(1310, 12);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(36, 29);
             this.btnSair.TabIndex = 65;
@@ -101,7 +101,7 @@
             "ATIVO",
             "INATIVO",
             "DESATIVADO"});
-            this.cmbStatus.Location = new System.Drawing.Point(809, 30);
+            this.cmbStatus.Location = new System.Drawing.Point(827, 27);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(139, 21);
             this.cmbStatus.TabIndex = 61;
@@ -157,16 +157,6 @@
             this.lblResposta.TabIndex = 56;
             this.lblResposta.Text = "F U N C I O N A R I O S";
             // 
-            // pctFuncionario
-            // 
-            this.pctFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("pctFuncionario.Image")));
-            this.pctFuncionario.Location = new System.Drawing.Point(50, 12);
-            this.pctFuncionario.Name = "pctFuncionario";
-            this.pctFuncionario.Size = new System.Drawing.Size(188, 245);
-            this.pctFuncionario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctFuncionario.TabIndex = 55;
-            this.pctFuncionario.TabStop = false;
-            // 
             // dgvFuncionario
             // 
             this.dgvFuncionario.BackgroundColor = System.Drawing.SystemColors.Control;
@@ -206,11 +196,21 @@
             this.dgvFuncionario.Size = new System.Drawing.Size(626, 405);
             this.dgvFuncionario.TabIndex = 79;
             // 
+            // pctFuncionario
+            // 
+            this.pctFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("pctFuncionario.Image")));
+            this.pctFuncionario.Location = new System.Drawing.Point(50, 12);
+            this.pctFuncionario.Name = "pctFuncionario";
+            this.pctFuncionario.Size = new System.Drawing.Size(188, 245);
+            this.pctFuncionario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctFuncionario.TabIndex = 55;
+            this.pctFuncionario.TabStop = false;
+            // 
             // frmFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1049, 631);
+            this.ClientSize = new System.Drawing.Size(1479, 776);
             this.Controls.Add(this.dgvFuncionario);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.lblStatus);
@@ -222,11 +222,13 @@
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.lblResposta);
             this.Controls.Add(this.pctFuncionario);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmFuncionario";
             this.Text = "Funcionario";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Funcionario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pctFuncionario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFuncionario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -40,11 +40,15 @@ namespace Projeto_BooksAndFun
         //Livros
         public static string nomeLivro;
 
+        //Cadastrar Livros
+        public static string titulo, IdAutor, IdGenero, anoPub, preco, estoque, IdEditora;
+
 
         //FTP
         public static string enderecoServidorFtp = "ftp://127.0.0.1/";
         public static string usuarioFtp = "ti26";
         public static string senhaFtp = "123";
+
 
 
 

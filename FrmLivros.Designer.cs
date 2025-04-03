@@ -78,7 +78,7 @@
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(692, 72);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(5);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(556, 29);
             this.txtNome.TabIndex = 73;
@@ -93,7 +93,7 @@
             "INATIVO",
             "DESATIVADO"});
             this.cmbStatus.Location = new System.Drawing.Point(1365, 72);
-            this.cmbStatus.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cmbStatus.Margin = new System.Windows.Forms.Padding(5);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(229, 29);
             this.cmbStatus.TabIndex = 72;
@@ -105,8 +105,8 @@
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Britannic Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnExcluir.Location = new System.Drawing.Point(164, 641);
-            this.btnExcluir.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnExcluir.Location = new System.Drawing.Point(164, 602);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(5);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(180, 37);
             this.btnExcluir.TabIndex = 71;
@@ -120,8 +120,8 @@
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Britannic Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSalvar.Location = new System.Drawing.Point(164, 586);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnSalvar.Location = new System.Drawing.Point(164, 554);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(5);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(180, 38);
             this.btnSalvar.TabIndex = 70;
@@ -135,8 +135,8 @@
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.Font = new System.Drawing.Font("Britannic Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCadastrar.Location = new System.Drawing.Point(164, 533);
-            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnCadastrar.Location = new System.Drawing.Point(164, 504);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(5);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(180, 40);
             this.btnCadastrar.TabIndex = 69;
@@ -161,7 +161,7 @@
             // 
             this.pctFuncionario.Image = global::Projeto_BooksAndFun.Properties.Resources.open_book__2_;
             this.pctFuncionario.Location = new System.Drawing.Point(135, 72);
-            this.pctFuncionario.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pctFuncionario.Margin = new System.Windows.Forms.Padding(5);
             this.pctFuncionario.Name = "pctFuncionario";
             this.pctFuncionario.Size = new System.Drawing.Size(227, 321);
             this.pctFuncionario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -193,7 +193,7 @@
             this.dgvLivros.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvLivros.EnableHeadersVisualStyles = false;
             this.dgvLivros.Location = new System.Drawing.Point(505, 147);
-            this.dgvLivros.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dgvLivros.Margin = new System.Windows.Forms.Padding(5);
             this.dgvLivros.MultiSelect = false;
             this.dgvLivros.Name = "dgvLivros";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -214,7 +214,7 @@
             // 
             this.bntSair.Image = global::Projeto_BooksAndFun.Properties.Resources.close_button__2_;
             this.bntSair.Location = new System.Drawing.Point(1762, 28);
-            this.bntSair.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bntSair.Margin = new System.Windows.Forms.Padding(5);
             this.bntSair.Name = "bntSair";
             this.bntSair.Size = new System.Drawing.Size(95, 60);
             this.bntSair.TabIndex = 79;
@@ -225,7 +225,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1940, 1100);
+            this.ClientSize = new System.Drawing.Size(1924, 1061);
             this.Controls.Add(this.bntSair);
             this.Controls.Add(this.dgvLivros);
             this.Controls.Add(this.lblStatus);
@@ -239,7 +239,7 @@
             this.Controls.Add(this.pctFuncionario);
             this.Font = new System.Drawing.Font("Britannic Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmLivros";
             this.Text = "FrmLivros";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

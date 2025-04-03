@@ -373,6 +373,16 @@ namespace Projeto_BooksAndFun.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pilha_de_tres_livros_modificado1 {
+            get {
+                object obj = ResourceManager.GetObject("pilha-de-tres-livros_modificado1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Rectangle_2 {
             get {
                 object obj = ResourceManager.GetObject("Rectangle 2", resourceCulture);
@@ -433,6 +443,26 @@ namespace Projeto_BooksAndFun.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Rectangle_7 {
+            get {
+                object obj = ResourceManager.GetObject("Rectangle 7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rectangle_7__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Rectangle 7 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap revenue {
             get {
                 object obj = ResourceManager.GetObject("revenue", resourceCulture);
@@ -456,6 +486,16 @@ namespace Projeto_BooksAndFun.Properties {
         internal static System.Drawing.Bitmap servico_de_gestao_modificado {
             get {
                 object obj = ResourceManager.GetObject("servico-de-gestao_modificado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap slider {
+            get {
+                object obj = ResourceManager.GetObject("slider", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

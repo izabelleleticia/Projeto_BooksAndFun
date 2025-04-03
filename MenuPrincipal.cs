@@ -97,11 +97,7 @@ namespace Projeto_BooksAndFun
             }
         }
 
-        private void btnResponder_Click(object sender, EventArgs e)
-        {
-            new frmResponderEmail().Show();
-            Hide();
-        }
+ 
 
         private void timerData_Tick(object sender, EventArgs e)
         {
