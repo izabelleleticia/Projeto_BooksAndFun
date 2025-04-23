@@ -49,10 +49,16 @@
             this.dgvEditora = new System.Windows.Forms.DataGridView();
             this.bntSair = new System.Windows.Forms.PictureBox();
             this.dgvGenero = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pctLivro = new System.Windows.Forms.PictureBox();
+            this.btnSelecionarImagem = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pctFuncionario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEditora)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bntSair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGenero)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctLivro)).BeginInit();
             this.SuspendLayout();
             // 
             // txtAnoPub
@@ -65,22 +71,22 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Britannic Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
             this.label3.Location = new System.Drawing.Point(574, 252);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(245, 32);
+            this.label3.Size = new System.Drawing.Size(280, 33);
             this.label3.TabIndex = 102;
             this.label3.Text = "ANO PUBLICAÇÃO:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Britannic Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
             this.label2.Location = new System.Drawing.Point(326, 252);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 32);
+            this.label2.Size = new System.Drawing.Size(186, 33);
             this.label2.TabIndex = 101;
             this.label2.Text = "ID GÊNERO:";
             // 
@@ -95,7 +101,7 @@
             // 
             this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(122)))), ((int)(((byte)(178)))));
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluir.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.SystemColors.Window;
             this.btnExcluir.Location = new System.Drawing.Point(78, 346);
             this.btnExcluir.Name = "btnExcluir";
@@ -108,7 +114,7 @@
             // 
             this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.Font = new System.Drawing.Font("Britannic Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnCadastrar.Location = new System.Drawing.Point(78, 302);
             this.btnCadastrar.Name = "btnCadastrar";
@@ -121,33 +127,33 @@
             // lblDescricao
             // 
             this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Font = new System.Drawing.Font("Britannic Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescricao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
             this.lblDescricao.Location = new System.Drawing.Point(574, 99);
             this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(145, 32);
+            this.lblDescricao.Size = new System.Drawing.Size(162, 33);
             this.lblDescricao.TabIndex = 92;
             this.lblDescricao.Text = "ID AUTOR:";
             // 
             // lblNomeEvento
             // 
             this.lblNomeEvento.AutoSize = true;
-            this.lblNomeEvento.Font = new System.Drawing.Font("Britannic Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeEvento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
             this.lblNomeEvento.Location = new System.Drawing.Point(326, 99);
             this.lblNomeEvento.Name = "lblNomeEvento";
-            this.lblNomeEvento.Size = new System.Drawing.Size(94, 32);
+            this.lblNomeEvento.Size = new System.Drawing.Size(110, 33);
             this.lblNomeEvento.TabIndex = 91;
             this.lblNomeEvento.Text = "NOME:";
             // 
             // lblResposta
             // 
             this.lblResposta.AutoSize = true;
-            this.lblResposta.Font = new System.Drawing.Font("Britannic Bold", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResposta.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResposta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
             this.lblResposta.Location = new System.Drawing.Point(544, 25);
             this.lblResposta.Name = "lblResposta";
-            this.lblResposta.Size = new System.Drawing.Size(293, 36);
+            this.lblResposta.Size = new System.Drawing.Size(339, 37);
             this.lblResposta.TabIndex = 90;
             this.lblResposta.Text = "CADASTRAR LIVROS";
             // 
@@ -168,11 +174,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Britannic Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
             this.label1.Location = new System.Drawing.Point(326, 391);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(238, 32);
+            this.label1.Size = new System.Drawing.Size(273, 33);
             this.label1.TabIndex = 106;
             this.label1.Text = "PREÇO UNITÁRIO:";
             // 
@@ -186,11 +192,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Britannic Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
             this.label4.Location = new System.Drawing.Point(578, 391);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(185, 32);
+            this.label4.Size = new System.Drawing.Size(213, 33);
             this.label4.TabIndex = 108;
             this.label4.Text = "QUANTIDADE:";
             // 
@@ -204,11 +210,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Britannic Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
             this.label5.Location = new System.Drawing.Point(878, 252);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(170, 32);
+            this.label5.Size = new System.Drawing.Size(189, 33);
             this.label5.TabIndex = 110;
             this.label5.Text = "ID EDITORA:";
             // 
@@ -256,11 +262,45 @@
             this.dgvGenero.Size = new System.Drawing.Size(569, 289);
             this.dgvGenero.TabIndex = 113;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 114;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pctLivro
+            // 
+            this.pctLivro.Image = global::Projeto_BooksAndFun.Properties.Resources.abra_o_livro;
+            this.pctLivro.Location = new System.Drawing.Point(331, 452);
+            this.pctLivro.Name = "pctLivro";
+            this.pctLivro.Size = new System.Drawing.Size(142, 94);
+            this.pctLivro.TabIndex = 115;
+            this.pctLivro.TabStop = false;
+            // 
+            // btnSelecionarImagem
+            // 
+            this.btnSelecionarImagem.Location = new System.Drawing.Point(489, 491);
+            this.btnSelecionarImagem.Name = "btnSelecionarImagem";
+            this.btnSelecionarImagem.Size = new System.Drawing.Size(75, 23);
+            this.btnSelecionarImagem.TabIndex = 116;
+            this.btnSelecionarImagem.Text = "button1";
+            this.btnSelecionarImagem.UseVisualStyleBackColor = true;
+            this.btnSelecionarImagem.Click += new System.EventHandler(this.btnSelecionarImagem_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // CadLivros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1762, 820);
+            this.ClientSize = new System.Drawing.Size(1700, 820);
+            this.Controls.Add(this.btnSelecionarImagem);
+            this.Controls.Add(this.pctLivro);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvGenero);
             this.Controls.Add(this.bntSair);
             this.Controls.Add(this.dgvEditora);
@@ -291,6 +331,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvEditora)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bntSair)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGenero)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctLivro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,5 +361,9 @@
         private System.Windows.Forms.DataGridView dgvEditora;
         private System.Windows.Forms.PictureBox bntSair;
         private System.Windows.Forms.DataGridView dgvGenero;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pctLivro;
+        private System.Windows.Forms.Button btnSelecionarImagem;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

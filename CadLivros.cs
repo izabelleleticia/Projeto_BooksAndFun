@@ -8,11 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.IO;
 
 namespace Projeto_BooksAndFun
 {
     public partial class CadLivros : Form
     {
+        string caminhoImagem = "";
+        string nomeArquivoImagem = "";
+
         public CadLivros()
         {
             InitializeComponent();
@@ -64,38 +68,45 @@ namespace Projeto_BooksAndFun
                 MessageBox.Show("Erro ao carregar editoras: " + erro.Message);
             }
         }
-        private void CadastrarLivros()
+           private void CadastrarLivros()
         {
             try
             {
                 Banco.Conectar();
-                string inserir = @"INSERT INTO tbl_livros (titulo_livros, id_autor, id_genero, ano_publicacao, preco, estoque, id_editora)
-                                            VALUES(@titulo, @IdAutor, @IdGenero, @anoPub, @preco, @estoque, @IdEditora);";
+
+                // Define o caminho para salvar a imagem
+                string pastaDestino = Path.Combine(Application.StartupPath, @"..\..\..\uploads\livros");
+                Directory.CreateDirectory(pastaDestino); // Garante que a pasta exista
+
+                string destinoImagem = Path.Combine(pastaDestino, nomeArquivoImagem);
+                File.Copy(caminhoImagem, destinoImagem, true); // Salva a imagem no destino
+
+                string caminhoRelativo = $"livros/{nomeArquivoImagem}"; // Isso vai pro banco
+
+                string inserir = @"INSERT INTO tbl_livros 
+            (titulo_livros, imagem, id_autor, id_genero, ano_publicacao, preco, estoque, id_editora)
+            VALUES (@titulo, @imagem, @IdAutor, @IdGenero, @anoPub, @preco, @estoque, @IdEditora);";
+
                 MySqlCommand cmd = new MySqlCommand(inserir, Banco.conexao);
                 cmd.Parameters.AddWithValue("@titulo", Variaveis.titulo);
+                cmd.Parameters.AddWithValue("@imagem", caminhoRelativo); // <- Aqui
                 cmd.Parameters.AddWithValue("@IdAutor", Variaveis.IdAutor);
                 cmd.Parameters.AddWithValue("@IdGenero", Variaveis.IdGenero);
                 cmd.Parameters.AddWithValue("@anoPub", Variaveis.anoPub);
                 cmd.Parameters.AddWithValue("@preco", Variaveis.preco);
                 cmd.Parameters.AddWithValue("@estoque", Variaveis.estoque);
                 cmd.Parameters.AddWithValue("@IdEditora", Variaveis.IdEditora);
-                cmd.ExecuteNonQuery(); // Executa o INSERT no banco
 
-                MessageBox.Show("Livros cadastrados com sucesso!", "CADASTRO DE LIVROS", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Banco.Desconectar(); // Fecha a conexão
+                cmd.ExecuteNonQuery();
 
+                MessageBox.Show("Livro cadastrado com sucesso!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Banco.Desconectar();
             }
             catch (Exception erro)
             {
-
-                MessageBox.Show("Erro ao cadastrar livros: "+erro.Message);
+                MessageBox.Show("Erro ao cadastrar livro: " + erro.Message);
             }
-
-
-
-
-        }
-
+        } 
         private void CadLivros_Load(object sender, EventArgs e)
         {
             CarregarEditoras();
@@ -119,6 +130,19 @@ namespace Projeto_BooksAndFun
             Variaveis.estoque = txtQuantidade.Text;
             Variaveis.IdEditora = txtIDEditora.Text;
             CadastrarLivros();
+        }
+
+        private void btnSelecionarImagem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Imagens|*.jpg;*.jpeg;*.png;*.bmp";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                caminhoImagem = dialog.FileName;
+                nomeArquivoImagem = Path.GetFileName(caminhoImagem);
+                pctLivro.Image = Image.FromFile(caminhoImagem);
+            }
         }
     }
 }
