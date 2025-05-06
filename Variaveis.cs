@@ -41,7 +41,8 @@ namespace Projeto_BooksAndFun
         public static string nomeLivro;
 
         //Cadastrar Livros
-        public static string titulo, IdAutor, IdGenero, anoPub, preco, estoque, IdEditora;
+        public static string titulo, IdAutor, IdGenero, anoPub, preco, estoque, IdEditora, serie;
+        public static string caminhoImagem = "";
 
 
         //FTP

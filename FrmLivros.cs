@@ -50,12 +50,10 @@ namespace Projeto_BooksAndFun
 
                     if (!string.IsNullOrEmpty(caminhoRelativo))
                     {
-                        if (caminhoRelativo.StartsWith("livros/"))
-                        {
-                            caminhoRelativo = caminhoRelativo.Substring(7);
-                        }
+                        string caminhoCompleto = Path.Combine(caminhoBase, caminhoRelativo);
 
-                        string caminhoCompleto = Path.Combine(caminhoBase, "livros", caminhoRelativo);
+
+   
                         caminhoCompleto = caminhoCompleto.Replace('/', '\\');
 
                         if (File.Exists(caminhoCompleto))
@@ -124,6 +122,27 @@ namespace Projeto_BooksAndFun
             Hide();
         }
 
-        // Demais eventos...
+        private void dgvLivros_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                // Verifica se a célula clicada é válida (não cabeçalho)
+                if (e.RowIndex >= 0)
+                {
+                    // Obtém o ID do livro clicado
+                    int livroId = Convert.ToInt32(dgvLivros.Rows[e.RowIndex].Cells["id_livros"].Value);
+
+                    // Abre o formulário de edição e passa o ID do livro
+                    editarLivro formEdicao = new editarLivro(livroId);
+                    formEdicao.Show();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao selecionar o livro: " + ex.Message);
+            }
+
+            // Demais eventos...
+        }
     }
 }

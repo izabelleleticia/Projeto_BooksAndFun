@@ -31,32 +31,30 @@
             this.txtAnoPub = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtIdAutor = new System.Windows.Forms.TextBox();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.lblDescricao = new System.Windows.Forms.Label();
             this.lblNomeEvento = new System.Windows.Forms.Label();
             this.lblResposta = new System.Windows.Forms.Label();
             this.txtNomeLivro = new System.Windows.Forms.TextBox();
-            this.txtIDGenero = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPreco = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtIDEditora = new System.Windows.Forms.TextBox();
             this.pctFuncionario = new System.Windows.Forms.PictureBox();
-            this.dgvEditora = new System.Windows.Forms.DataGridView();
             this.bntSair = new System.Windows.Forms.PictureBox();
-            this.dgvGenero = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pctLivro = new System.Windows.Forms.PictureBox();
             this.btnSelecionarImagem = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.cmbSerie = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmbAutor = new System.Windows.Forms.ComboBox();
+            this.cmbEditora = new System.Windows.Forms.ComboBox();
+            this.cmbGenero = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctFuncionario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEditora)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bntSair)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGenero)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLivro)).BeginInit();
             this.SuspendLayout();
@@ -86,16 +84,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
             this.label2.Location = new System.Drawing.Point(326, 252);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(186, 33);
+            this.label2.Size = new System.Drawing.Size(149, 33);
             this.label2.TabIndex = 101;
-            this.label2.Text = "ID GÊNERO:";
-            // 
-            // txtIdAutor
-            // 
-            this.txtIdAutor.Location = new System.Drawing.Point(579, 135);
-            this.txtIdAutor.Name = "txtIdAutor";
-            this.txtIdAutor.Size = new System.Drawing.Size(220, 20);
-            this.txtIdAutor.TabIndex = 100;
+            this.label2.Text = "GÊNERO:";
             // 
             // btnExcluir
             // 
@@ -131,9 +122,9 @@
             this.lblDescricao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
             this.lblDescricao.Location = new System.Drawing.Point(574, 99);
             this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(162, 33);
+            this.lblDescricao.Size = new System.Drawing.Size(125, 33);
             this.lblDescricao.TabIndex = 92;
-            this.lblDescricao.Text = "ID AUTOR:";
+            this.lblDescricao.Text = "AUTOR:";
             // 
             // lblNomeEvento
             // 
@@ -163,13 +154,6 @@
             this.txtNomeLivro.Name = "txtNomeLivro";
             this.txtNomeLivro.Size = new System.Drawing.Size(220, 20);
             this.txtNomeLivro.TabIndex = 88;
-            // 
-            // txtIDGenero
-            // 
-            this.txtIDGenero.Location = new System.Drawing.Point(331, 294);
-            this.txtIDGenero.Name = "txtIDGenero";
-            this.txtIDGenero.Size = new System.Drawing.Size(220, 20);
-            this.txtIDGenero.TabIndex = 104;
             // 
             // label1
             // 
@@ -214,16 +198,9 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
             this.label5.Location = new System.Drawing.Point(878, 252);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(189, 33);
+            this.label5.Size = new System.Drawing.Size(152, 33);
             this.label5.TabIndex = 110;
-            this.label5.Text = "ID EDITORA:";
-            // 
-            // txtIDEditora
-            // 
-            this.txtIDEditora.Location = new System.Drawing.Point(883, 288);
-            this.txtIDEditora.Name = "txtIDEditora";
-            this.txtIDEditora.Size = new System.Drawing.Size(220, 20);
-            this.txtIDEditora.TabIndex = 109;
+            this.label5.Text = "EDITORA:";
             // 
             // pctFuncionario
             // 
@@ -234,14 +211,6 @@
             this.pctFuncionario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctFuncionario.TabIndex = 89;
             this.pctFuncionario.TabStop = false;
-            // 
-            // dgvEditora
-            // 
-            this.dgvEditora.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEditora.Location = new System.Drawing.Point(1128, 69);
-            this.dgvEditora.Name = "dgvEditora";
-            this.dgvEditora.Size = new System.Drawing.Size(569, 289);
-            this.dgvEditora.TabIndex = 111;
             // 
             // bntSair
             // 
@@ -254,14 +223,6 @@
             this.bntSair.TabStop = false;
             this.bntSair.Click += new System.EventHandler(this.bntSair_Click);
             // 
-            // dgvGenero
-            // 
-            this.dgvGenero.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGenero.Location = new System.Drawing.Point(1128, 391);
-            this.dgvGenero.Name = "dgvGenero";
-            this.dgvGenero.Size = new System.Drawing.Size(569, 289);
-            this.dgvGenero.TabIndex = 113;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
@@ -273,19 +234,21 @@
             // pctLivro
             // 
             this.pctLivro.Image = global::Projeto_BooksAndFun.Properties.Resources.abra_o_livro;
-            this.pctLivro.Location = new System.Drawing.Point(331, 452);
+            this.pctLivro.Location = new System.Drawing.Point(331, 476);
             this.pctLivro.Name = "pctLivro";
             this.pctLivro.Size = new System.Drawing.Size(142, 94);
+            this.pctLivro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctLivro.TabIndex = 115;
             this.pctLivro.TabStop = false;
             // 
             // btnSelecionarImagem
             // 
+            this.btnSelecionarImagem.Font = new System.Drawing.Font("Impact", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelecionarImagem.Location = new System.Drawing.Point(489, 491);
             this.btnSelecionarImagem.Name = "btnSelecionarImagem";
-            this.btnSelecionarImagem.Size = new System.Drawing.Size(75, 23);
+            this.btnSelecionarImagem.Size = new System.Drawing.Size(159, 23);
             this.btnSelecionarImagem.TabIndex = 116;
-            this.btnSelecionarImagem.Text = "button1";
+            this.btnSelecionarImagem.Text = "SELECIONAR IMAGEM";
             this.btnSelecionarImagem.UseVisualStyleBackColor = true;
             this.btnSelecionarImagem.Click += new System.EventHandler(this.btnSelecionarImagem_Click);
             // 
@@ -293,28 +256,71 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // cmbSerie
+            // 
+            this.cmbSerie.FormattingEnabled = true;
+            this.cmbSerie.Location = new System.Drawing.Point(871, 427);
+            this.cmbSerie.Name = "cmbSerie";
+            this.cmbSerie.Size = new System.Drawing.Size(121, 21);
+            this.cmbSerie.TabIndex = 118;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(33)))), ((int)(((byte)(81)))));
+            this.label6.Location = new System.Drawing.Point(865, 391);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(101, 33);
+            this.label6.TabIndex = 119;
+            this.label6.Text = "SÉRIE";
+            // 
+            // cmbAutor
+            // 
+            this.cmbAutor.FormattingEnabled = true;
+            this.cmbAutor.Location = new System.Drawing.Point(583, 135);
+            this.cmbAutor.Name = "cmbAutor";
+            this.cmbAutor.Size = new System.Drawing.Size(121, 21);
+            this.cmbAutor.TabIndex = 120;
+            // 
+            // cmbEditora
+            // 
+            this.cmbEditora.FormattingEnabled = true;
+            this.cmbEditora.Location = new System.Drawing.Point(884, 294);
+            this.cmbEditora.Name = "cmbEditora";
+            this.cmbEditora.Size = new System.Drawing.Size(121, 21);
+            this.cmbEditora.TabIndex = 121;
+            // 
+            // cmbGenero
+            // 
+            this.cmbGenero.FormattingEnabled = true;
+            this.cmbGenero.Location = new System.Drawing.Point(331, 293);
+            this.cmbGenero.Name = "cmbGenero";
+            this.cmbGenero.Size = new System.Drawing.Size(121, 21);
+            this.cmbGenero.TabIndex = 117;
+            // 
             // CadLivros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1700, 820);
+            this.Controls.Add(this.cmbEditora);
+            this.Controls.Add(this.cmbAutor);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.cmbSerie);
+            this.Controls.Add(this.cmbGenero);
             this.Controls.Add(this.btnSelecionarImagem);
             this.Controls.Add(this.pctLivro);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.dgvGenero);
             this.Controls.Add(this.bntSair);
-            this.Controls.Add(this.dgvEditora);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtIDEditora);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtQuantidade);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPreco);
-            this.Controls.Add(this.txtIDGenero);
             this.Controls.Add(this.txtAnoPub);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtIdAutor);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.lblDescricao);
@@ -328,9 +334,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.CadLivros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctFuncionario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEditora)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bntSair)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGenero)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLivro)).EndInit();
             this.ResumeLayout(false);
@@ -343,7 +347,6 @@
         private System.Windows.Forms.TextBox txtAnoPub;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtIdAutor;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label lblDescricao;
@@ -351,19 +354,20 @@
         private System.Windows.Forms.Label lblResposta;
         private System.Windows.Forms.PictureBox pctFuncionario;
         private System.Windows.Forms.TextBox txtNomeLivro;
-        private System.Windows.Forms.TextBox txtIDGenero;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPreco;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtIDEditora;
-        private System.Windows.Forms.DataGridView dgvEditora;
         private System.Windows.Forms.PictureBox bntSair;
-        private System.Windows.Forms.DataGridView dgvGenero;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pctLivro;
         private System.Windows.Forms.Button btnSelecionarImagem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ComboBox cmbSerie;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmbAutor;
+        private System.Windows.Forms.ComboBox cmbEditora;
+        private System.Windows.Forms.ComboBox cmbGenero;
     }
 }

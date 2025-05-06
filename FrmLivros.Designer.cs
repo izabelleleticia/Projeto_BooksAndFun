@@ -200,6 +200,7 @@
             this.dgvLivros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLivros.Size = new System.Drawing.Size(1552, 982);
             this.dgvLivros.TabIndex = 78;
+            this.dgvLivros.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLivros_CellClick);
             // 
             // bntSair
             // 
